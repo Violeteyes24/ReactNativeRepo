@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, Button, Alert } from 'react-native';
 
 const LoginCard: React.FC = () => {
   return (
@@ -7,6 +7,16 @@ const LoginCard: React.FC = () => {
       <View style={styles.card}>
         <ActivityIndicator />
         <Text style={styles.title}>MentalHelp</Text>
+        <Button title="Alert" onPress={() => Alert.alert("Invalid data, invalid programming, invalid tanan yawaaa", "wtf am I doing?", [
+          {
+            text:'Cancel',
+            onPress:() => console.log("Cancel Pressed")
+          },
+          {
+            text: 'Ok',
+            onPress: () => console.log("Ok Pressed")
+          }
+          ])} />
         <Text>Me Please kamatyonon nako</Text>
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Username</Text>
