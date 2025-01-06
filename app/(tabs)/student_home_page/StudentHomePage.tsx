@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import BottomNavBar from '../../(tabs)/components/BottomNavBar';
 
 const StudentHomePage = () => {
     return (
@@ -18,20 +19,7 @@ const StudentHomePage = () => {
                     How are you feeling today, Student?
                 </Text>
             </View>
-            <View style={styles.bottomNav}>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navItemText}>Check In</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navItemText}>Messages</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navItemText}>Appointment</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.navItem}>
-                    <Text style={styles.navItemText}>Profile</Text>
-                </TouchableOpacity>
-            </View>
+            <BottomNavBar />
         </View>
     );
 };
@@ -78,19 +66,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         color: '#000',
-    },
-    bottomNav: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        backgroundColor: '#268246',
-        paddingVertical: 10,
-    },
-    navItem: {
-        alignItems: 'center',
-    },
-    navItemText: {
-        color: '#FFF',
-        fontSize: 14,
     },
 });
 
