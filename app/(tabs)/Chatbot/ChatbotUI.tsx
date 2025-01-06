@@ -1,4 +1,3 @@
-// Chatbot.tsx
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 
@@ -8,7 +7,7 @@ const questions = [
     "Would you like to update your mood tracker?",
 ];
 
-const responses = {
+const responses: { [key: string]: string } = {
     "How are you feeling today?": "I'm here to listen! Can you share a bit more about how you're feeling?",
     "Would you like to schedule an appointment with a counselor?": "I can help with that! Please contact our support to find available slots.",
     "Would you like to update your mood tracker?": "Sure! Please go to the mood tracker section to log your mood.",
